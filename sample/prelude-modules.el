@@ -15,7 +15,7 @@
 ;; (require 'prelude-clojure)
 ;; (require 'prelude-coffee)
 ;; (require 'prelude-common-lisp)
-;; (require 'prelude-css)
+(require 'prelude-css)
 (require 'prelude-emacs-lisp)
 ;; (require 'prelude-erlang)
 ;; (require 'prelude-elixir)
@@ -34,8 +34,8 @@
 ;; (require 'prelude-scala)
 (require 'prelude-scheme)
 (require 'prelude-shell)
-;; (require 'prelude-scss)
-;; (require 'prelude-ts)
-;; (require 'prelude-web) ;; Emacs mode for web templates
+(require 'prelude-scss)
+(require 'prelude-ts)
+(require 'prelude-web) ;; Emacs mode for web templates
 (require 'prelude-xml)
-;; (require 'prelude-yaml)
+(require 'prelude-yaml)
