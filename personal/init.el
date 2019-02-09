@@ -13,3 +13,6 @@
 
 (setq deft-extensions '("txt" "tex" "org" "md"))
 (setq deft-directory "~/repos/playground/defter/")
+
+
+(setq js-indent-level 2)
