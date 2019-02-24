@@ -1,7 +1,7 @@
 ;; We want the daemon mode:
 (server-start)
 
-(prelude-require-packages '(deft lsp-mode lsp-python lsp-ui company-lsp pyenv-mode lsp-mode lsp-haskell))
+(prelude-require-packages '(deft lsp-mode lsp-python lsp-ui company-lsp pyenv-mode lsp-mode lsp-haskell tabbar))
 
 
 (require 'lsp)
