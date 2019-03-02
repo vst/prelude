@@ -14,5 +14,9 @@
 (setq deft-extensions '("txt" "tex" "org" "md"))
 (setq deft-directory "~/repos/playground/defter/")
 
+(defun my/markdown-settings ()
+  (setq prelude-clean-whitespace-on-save nil))
+
+(add-hook 'markdown-mode-hook 'my/markdown-settings)
 
 (setq js-indent-level 2)
