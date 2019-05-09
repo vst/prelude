@@ -1,7 +1,7 @@
 ;; We want the daemon mode:
 (server-start)
 
-(prelude-require-packages '(deft lsp-mode lsp-python lsp-ui company-lsp pyenv-mode lsp-mode lsp-haskell tabbar))
+(prelude-require-packages '(deft lsp-mode lsp-python lsp-ui company-lsp pyenv-mode lsp-mode lsp-haskell tabbar flymd))
 
 
 (require 'lsp)
@@ -20,3 +20,13 @@
 (add-hook 'markdown-mode-hook 'my/markdown-settings)
 
 (setq js-indent-level 2)
+
+
+(defun my-flymd-browser-function (url)
+  (let ((process-environment (browse-url-process-environment)))
+    (apply 'start-process
+           (concat "firefox " url)
+           nil
+           "/usr/bin/open"
+           (list "-a" "firefox" url))))
+(setq flymd-browser-open-function 'my-flymd-browser-function)
