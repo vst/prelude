@@ -30,3 +30,6 @@
            "/usr/bin/open"
            (list "-a" "firefox" url))))
 (setq flymd-browser-open-function 'my-flymd-browser-function)
+
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+(setq markdown-command "pandoc --from gfm -t html5 --mathjax --highlight-style pygments --standalone --metadata pagetitle=\"Markdown Preview\"")
