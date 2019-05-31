@@ -1,7 +1,20 @@
+;; TODO: CLEAN UP THE MESS
+
 ;; We want the daemon mode:
 (server-start)
 
-(prelude-require-packages '(deft lsp-mode lsp-python lsp-ui company-lsp pyenv-mode lsp-mode lsp-haskell tabbar flymd))
+;; Extra packages required:
+(prelude-require-packages '(
+                            company-lsp
+                            deft
+                            flymd
+                            lsp-haskell
+                            lsp-mode
+                            lsp-python
+                            lsp-ui
+                            pyenv-mode
+                            )
+                          )
 
 
 (require 'lsp)
@@ -21,7 +34,6 @@
 
 (setq js-indent-level 2)
 
-
 (defun my-flymd-browser-function (url)
   (let ((process-environment (browse-url-process-environment)))
     (apply 'start-process
@@ -33,3 +45,14 @@
 
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 (setq markdown-command "pandoc --from gfm -t html5 --mathjax --highlight-style pygments --standalone --metadata pagetitle=\"Markdown Preview\"")
+
+
+
+(tool-bar-mode -1)
+(setq frame-resize-pixelwise t)
+(dotimes (n 3)
+  (toggle-frame-maximized))
+
+
+(set-face-attribute 'default nil :height 135)
+(load-theme 'atom-one-dark)
